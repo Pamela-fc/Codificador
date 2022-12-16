@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.cdnfonts.com/css/mandalamono" rel="stylesheet">       
+    <link href="http://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/25bc4345e8.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    
+    <title>Codificador</title>
+</head>
+
+<body>
+    <main>
+        
+        <div class="cont">
+
+            <h1>Codificador</h1>
+            <br>
+            
+            <div class="tag">
+                <br>
+                <p class="tag64">> base64</p>
+                <p class="tagcifra">> cifra de césar</p>
+            </div>
+
+            <figure> 
+                <img src="./img/atena.jpg"
+       
+                  width="400"
+                 height="341">
+                 </figure>
+                 <!-- imagem-->
+
+            <form>
+
+                <textarea name="texto" id="texto" cols="40" rows="5" placeholder="Digite sua mensagem"></textarea>
+                <!-- TEXTO -->
+
+                <!--Caixa de selecionar-->
+                <select name="select" id="select" class="select" onclick="selecao()">
+                    <option id="option" value="selecione">Selecionar</option>
+                    <option id="base64" value="base64">Base64</option>
+                    <option id="cifra" value="cifra">Cifra de César</option>
+                </select>
+
+                <div class="chave-cont" id="chaveCont">
+                    <!--Chave para a cifra de César-->
+
+                    <label class="chave" for="range">Escolha uma chave:</label>
+
+                    <div class="deslize">
+                        <input type="range" value="1" min="1" max="26" class="range" id="range"
+                            oninput="rangenumber.value=value" />
+                        <input type="number" value="1" id="rangenumber" min="1" max="26" oninput="range.value=value" />
+                    </div>
+
+                </div>   
+                <div class="radiobtn">
+                    <!--Botões codificar e decodificar-->
+
+                    <div>
+                        <input type="radio" id="codificar" name="selecione" value="codificar" checked/>
+                        <label for="codificar">Codificar</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="decodificar" name="selecione" value="decodificar" />
+                        <label for="decodificar">Decodificar</label>
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <!--Botão para obter o resultado-->
+                    <button id="resultbtn"> - Criptografar - </button>
+                </div>
+
+                <textarea id="resultado" cols="40" rows="5" placeholder="Mensagem codificada"></textarea>
+                <!--Resultado-->
+
+                
+
+            </form>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>       
+    
+    </div>
+    
+</body>
+
+</html>
